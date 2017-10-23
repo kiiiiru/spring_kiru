@@ -106,7 +106,14 @@
 	    <artifactId>tiles-extras</artifactId>
 	    <version>3.0.7</version>
 	</dependency>
-
+<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis 
+		mybatis
+	-->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	    <version>3.4.5</version>
+	</dependency>
 
   </dependencies>
   
