@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- tiles register -->
+	<definition name="t_base" template="/WEB-INF/view/template.jsp">
+		<put-attribute name="title" value="Spring KIRUKIRU"/>
+		<put-attribute name="nav" value="/WEB-INF/view/base/nav.jsp"/>
+		<put-attribute name="section" value="/WEB-INF/view/base/main.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/view/base/footer.jsp"/>
+	</definition>	
+	
+	<definition name="t_el" templateExpression="/WEB-INF/view/template.jsp" extends="t_base">
+		<put-attribute name="section" expression="/WEB-INF/view/base/${section}.jsp" />
+	</definition>
+	
+	<!-- wildCard support 
+	<definition name="tw_*/*" template="/WEB-INF/view/template.jsp" extends="t_base">
+		<put-attribute name="section" value="/WEB-INF/view/{1}/{2}.jsp" />
+	</definition>
+	
+	
+	
+   <definition name="t_el_media" extends="t_base">
+      <put-attribute name="section">
+         <definition template="/WEB-INF/view/media/template.jsp">
+            <put-attribute name="section" expression="/WEB-INF/view/${section}.jsp" />
+         </definition>
+      </put-attribute>
+   </definition>
+   
+   <definition name="t_el_openbox" extends="t_base">
+      <put-attribute name="section">
+         <definition template="/WEB-INF/view/openbox/template.jsp">
+            <put-attribute name="section" expression="/WEB-INF/view/${section}.jsp" />
+         </definition>
+      </put-attribute>
+   </definition>
+   
+   <definition name="t_el_gallery" extends="t_base">
+      <put-attribute name="section">
+         <definition template="/WEB-INF/view/gallery/template.jsp">
+            <put-attribute name="section" expression="/WEB-INF/view/${section}.jsp" />
+         </definition>
+      </put-attribute>
+   </definition>
+   
+   <definition name="t_el_freetalk" extends="t_base">
+      <put-attribute name="section">
+         <definition template="/WEB-INF/view/freetalk/template.jsp">
+            <put-attribute name="section" expression="/WEB-INF/view/${section}.jsp" />
+         </definition>
+      </put-attribute>
+   </definition>
+
+	-->
+</tiles-definitions>
