@@ -37,11 +37,20 @@
 		</property>
 	</bean>
 	
-	<bean class="org.apache.tomcat.jdbc.pool.DataSource" id="ds">
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="url" value="jdbc:oracle:thin:@112.186.29.104:1521:xe"/>
-		<property name="username" value="spring_kirukiru"/>
+	<bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="ds">
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@112.186.29.104:1521:xe"/>
+		<property name="user" value="spring_kirukiru"/>
 		<property name="password" value="oracle"/>
+	</bean>
+	
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="ds"/>
+		<property name="mapperLocations">
+			<list>
+				
+			</list>
+		</property>
 	</bean>
 	
 </beans>
